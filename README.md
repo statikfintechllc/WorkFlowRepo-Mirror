@@ -34,7 +34,7 @@ Use:
 ```bash
 # Clone the repo
 git clone https://github.com/statikfintechllc/WorkFlowRepo.git
-cd WorkFlowRepo
+cd WorkFlowRepo-Mirror
 ls
 cd .github/workflows
 ls
@@ -58,46 +58,54 @@ cd .. && cd ..
 <details>
 <summary>🔎 Expand for Setup 🔍</summary>
 
-## 🧷 STEP 1: Create Your GitHub Personal Access Token (PAT)
+### 🧷 Create Both Tokens
 
-1.	Go to: `https://github.com/settings/tokens` → Fine-grained tokens
+1. Go to: `https://github.com/settings/tokens` → Fine-grained tokens  
+2. Click **Generate new token**  
+3. For **`PAT_GITHUB`**:
+   - Scope your **current workflow free account**
+   - Permissions:  
+     - ✅ `Contents`: Read & Write  
+     - ✅ `Metadata`: Read-only  
+4. For **`PULL_STATIK_PAT`**:
+   - Same as `PAT_GITHUB`, but in your paid public repo(s), to Scope your public repo(s):
+     - Permissions:  
+     - ✅ `Contents`: Read-only  
+     - ✅ `Metadata`: Read-only  
+5. Copy both tokens into thier repective Secrets
 
-2.	Click → Generate new token
+---
 
-3.	Set Token name: workflow-access
+### 🔒 Save Tokens as Repo Secrets
 
-4.	Expiration: No expiration
+In your **mirror repo** (e.g. `KDK-Grim/WorkFlowRepo-Mirror`):
 
-5.	Select Repo: choose your target repo
+- Go to: `Settings` → `Secrets and variables` → `Actions`
+- Click → **New repository secret**
 
-6.	Permissions:
-- ✅ Contents: Read and Write
-- ✅ Metadata: Read-only
+Add both:
 
-7.	Generate token → Copy it
+```text
+Name: PAT_GITHUB
+Value: <your free github write token>
 
---- 
-
-## 🔒 STEP 2: Save as a Repository Secret
-
-1.	Go to your repo:
-`https://github.com/<your-username>/<your-repo>/settings/secrets/actions`
-
-2.	Click → New repository secret
-- Name: PAT_GITHUB
-- Value: (Paste the token you copied)
+Name: PULL_STATIK_PAT
+Value: <your paid read-only token>
+```
 
 ---
 
 ## 🧬 STEP 3: Edit Workflow .yml Files
 
-1.    Find and update Lin 31 in the traffic_graph.yml workflow file change:
+1.    Find and update Line 28 & 31in the traffic_graph.yml workflow file change:
 
 ```yml
-REPO: statikfintechllc/AscendAI
+- name: Fetch traffic from AscendAI
+...
+          REPO: statikfintechllc/AscendAI
 ```
 
-> To match you're repo's naming.
+> Change to match you're repo's naming.
 
 ---
 
@@ -133,6 +141,16 @@ REPOS = [
 ```
 
 > To match you're repo's naming.
+
+## 🔐 Using Dual Tokens Across Repositories
+
+To fetch data **from one repo (StatikFinTech)** while committing changes **to another (your fork or mirror)**, you must use **two distinct GitHub secrets**:
+
+| Secret Name       | Required In Repo | Permissions       | Purpose                                                  |
+|-------------------|------------------|-------------------|----------------------------------------------------------|
+| `PAT_GITHUB`      | ✅ Your Repo      | `contents: write` | Allows **committing/pushing** output files (graph, gif) in `<your-free-account-repo>`  |
+| `PULL_STATIK_PAT` | ✅ Your Repo      | `contents: read`  | Allows **pulling traffic stats** from `<your-paid-account-repo>` |
+
 
 </details>
 
