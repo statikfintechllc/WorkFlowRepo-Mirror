@@ -102,10 +102,14 @@ Value: <your paid read-only token>
 ```yml
 - name: Fetch traffic from AscendAI
 ...
-          REPO: statikfintechllc/AscendAI
+    REPO: statikfintechllc/AscendAI
 ```
 
 > Change to match you're repo's naming.
+>
+> Never swap or combine these tokens.
+> PAT_GITHUB is for commits.
+> PULL_STATIK_PAT is for pulling public stats.
 
 ---
 
