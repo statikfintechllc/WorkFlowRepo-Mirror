@@ -3,7 +3,7 @@
 import requests, json, os
 from datetime import datetime
 
-TOKEN = os.getenv("PAT_GITHUB")
+TOKEN = os.getenv("PULL_STATIK_PAT")
 HEADERS = {"Authorization": f"token {TOKEN}"}
 
 REPOS = [
