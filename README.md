@@ -6,17 +6,17 @@
   style="height:33px;" />
   <div align="center">
   <img  
-	  src="https://img.shields.io/github/stars/statikfintechllc/WorkFlowRepo?style=social" alt="Stars"/>
+	  src="https://img.shields.io/github/stars/KDK-Grim/WorkFlowRepo-Mirror?style=social" alt="Stars"/>
   <img  
-	  src="https://img.shields.io/github/forks/statikfintechllc/WorkFlowRepo?style=social" alt="Forks"/>
+	  src="https://img.shields.io/github/forks/KDK-Grim/WorkFlowRepo-Mirror?style=social" alt="Forks"/>
   <img  
-	  src="https://img.shields.io/github/last-commit/statikfintechllc/WorkFlowRepo?style=social" alt="Last Commit"/>
+	  src="https://img.shields.io/github/last-commit/KDK-Grim/WorkFlowRepo-Mirror?style=social" alt="Last Commit"/>
 </div>
   
 # WorkFlowRepo-Mirror
 <div align="center"> 
    <a href="https://github.com/statikfintechllc/WorkFlowRepo.git">
-  <img src="https://img.shields.io/badge/Click%20to%20Install-Banner%20Workflow-darkred?labelColor=black" alt="GremlinGPT Alpha"/>
+  <img src="https://img.shields.io/badge/Click%20to%20Install%20Single-Repo%20WorkFlowRepo-darkred?labelColor=black" alt="GremlinGPT Alpha"/>
   </a>
    <a href="https://github.com/KDK-Grim/WorkFlowRepo-Mirror/master/.github/workflows">
   <img src="https://img.shields.io/badge/Click%20to%20See%20The-Advance%20Mirror%20Workflows-darkred?labelColor=black" alt="GremlinGPT Alpha"/>
