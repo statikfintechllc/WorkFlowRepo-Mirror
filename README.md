@@ -27,11 +27,13 @@
 
 > [!CAUTION]
 >
-> Just workflows, charts, banners, and traffic data lives here.
+> For these flows you need a Paid account and a Free account
+> 
+> Just workflows for charts, banners, and traffic data lives here.
 >
-> More as We Need them.
+> Adding more as we need them.
 >
-> Clone/Mirror these flows in your own Repos to show banners and Graphs.
+> Clone/Mirror these flows in your own Repos to show custom banners and Graphs with live data.
 >
 > Just change Naming Conventions to align with you're Systems.
 >
@@ -105,7 +107,7 @@ Value: <your paid read-only token>
 
 ## 🧬 STEP 3: Edit Workflow .yml Files
 
-1.    Find and update Line 28 & 31in the traffic_graph.yml workflow file change:
+1.    Find and update Line 28 & 31 inside the traffic_graph.yml workflow file change:
 
 ```yml
 - name: Fetch traffic from AscendAI
@@ -152,7 +154,7 @@ REPOS = [
 ]
 ```
 
-> To match you're repo's naming.
+> Change to match you're repo's naming.
 
 ## 🔐 Using Dual Tokens Across Repositories
 
