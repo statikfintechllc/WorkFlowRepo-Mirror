@@ -13,7 +13,15 @@
 	  src="https://img.shields.io/github/last-commit/statikfintechllc/WorkFlowRepo?style=social" alt="Last Commit"/>
 </div>
   
-# WorkFlowRepo
+# WorkFlowRepo-Mirror
+<div align="center"> 
+   <a href="https://github.com/statikfintechllc/WorkFlowRepo.git">
+  <img src="https://img.shields.io/badge/Click%20to%20Install-Banner%20Workflow-darkred?labelColor=black" alt="GremlinGPT Alpha"/>
+  </a>
+   <a href="https://github.com/KDK-Grim/WorkFlowRepo-Mirror/master/.github/workflows">
+  <img src="https://img.shields.io/badge/Click%20to%20See%20The-Advance%20Mirror%20Workflows-darkred?labelColor=black" alt="GremlinGPT Alpha"/>
+  </a>
+</div>
 
 </div>
 
@@ -171,9 +179,11 @@ The Ticker-Bot
 
  ---
 
+  <a href="https://raw.githubusercontent.com/statikfintechllc/AscendAI/master/About US/">
   <img  src="https://raw.githubusercontent.com/statikfintechllc/WorkFlowRepo/master/docs/ticker-bot/ticker.gif" 
   alt="Repo Ticker Stats" 
   style="height:33px;" />
+  </a>
 </div>
 
 ---
@@ -186,6 +196,7 @@ The Graph
  
   <a href="https://raw.githubusercontent.com/statikfintechllc/AscendAI/master/About US/">
   <img src="https://raw.githubusercontent.com/KDK-Grim/WorkFlowRepo-Mirror/master/docs/graph/traffic_graph.png" alt="Traffic Graph" />
+  </a>
 </div>
 
 </details>
