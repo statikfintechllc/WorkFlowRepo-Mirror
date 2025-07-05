@@ -15,7 +15,7 @@
   
 # WorkFlowRepo-Mirror
 <div align="center"> 
-   <a href="https://github.com/statikfintechllc/WorkFlowRepo.git">
+   <a href="https://github.com/statikfintechllc/master/WorkFlowRepo">
   <img src="https://img.shields.io/badge/Click%20to%20Install%20Single-Repo%20WorkFlowRepo-darkred?labelColor=black" alt="GremlinGPT Alpha"/>
   </a>
    <a href="https://github.com/KDK-Grim/WorkFlowRepo-Mirror/master/.github/workflows">
