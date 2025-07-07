@@ -14,6 +14,7 @@
 </div>
   
 # WorkFlowRepo-Mirror
+*StatikFinTech, LLC | SFTi*
 
 <div align="center"> 
    <a href="https://github.com/statikfintechllc/WorkFlowRepo.git">
@@ -39,6 +40,12 @@
 > Just change Naming Conventions to align with you're Systems.
 >
 > *(Instructions below)*
+
+<div align="center"> 
+
+[![Sponsor 💪 SFTi](https://img.shields.io/badge/Sponsor%20%F0%9F%92%AA%20statikfintechllc-darkred?logo=github&style=for-the-badge)](https://github.com/sponsors/statikfintechllc)
+
+</div>
 
 Use:
 
@@ -126,20 +133,20 @@ Value: <your paid read-only token>
 
 ## 🗃️ Files to Modify:
 
-### Inside .github/workflows in both .yml change:
+### Inside .github/workflows, line 8 in both .yml files, ensure:
 
 ```yml
 on:
   schedule:
-  #  - cron: "*/5 * * * *"
+  #  - cron: "*/5 * * * *" # Doesnt run
 ```
 
-**To:**
+**Looks like:**
 
 ```yml
 on:
   schedule:
-    - cron: "*/5 * * * *"
+    - cron: "*/5 * * * *" # runs every 5 minutes
 ```
 
 ### Inside docs/ticker-bot/fetch_stats.py, Update lines 9-16:
