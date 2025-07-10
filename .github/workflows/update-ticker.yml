@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout WorkFlowRepo (KDK-Grim)
+      - name: Checkout WorkFlowRepo-Mirror (Free Repo)
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
@@ -34,7 +34,7 @@ jobs:
           cd docs/ticker-bot
           if [ -f package.json ]; then npm install; fi
 
-      - name: Fetch GitHub traffic stats (StatikFinTech)
+      - name: Fetch GitHub traffic stats (Paid Repo)
         env:
           PULL_STATIK_PAT: ${{ secrets.PULL_STATIK_PAT }}
         run: python docs/ticker-bot/fetch_stats.py
@@ -50,7 +50,7 @@ jobs:
       - name: Generate banner
         run: node docs/ticker-bot/generate_banner.js
 
-      - name: Commit & push banner (KDK-Grim)
+      - name: Commit & push banner (Free Repo)
         env:
           GH_TOKEN: ${{ secrets.PAT_GITHUB }}
         run: |
