@@ -59,7 +59,7 @@ if [ ! -f workflowrepo.tar.gz ]; then
     exit 1
 fi
 
-if ! tar -tzf workflowrepo.tar.gz >/dev/null 2>&1; then
+if ! tar -tf workflowrepo.tar.gz | head -1 >/dev/null 2>&1; then
     echo "[❌] Downloaded file is not a valid tar.gz archive"
     echo "[💡] The URL might not point to a valid tar.gz file"
     exit 1
