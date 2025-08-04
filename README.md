@@ -60,9 +60,25 @@
 
 Use:
 
+### Quick Install (Recommended):
+
+```bash
+# Download and run the quick install script
+curl -s https://raw.githubusercontent.com/statikfintechllc/WorkFlowRepo-Mirror/master/curl_wget_script/cw.script.sh | bash
+```
+
+Or with wget:
+
+```bash
+# Download and run the quick install script
+wget -qO- https://raw.githubusercontent.com/statikfintechllc/WorkFlowRepo-Mirror/master/curl_wget_script/cw.script.sh | bash
+```
+
+### Manual Installation:
+
 ```bash
 # Clone the repo
-git clone https://github.com/statikfintechllc/WorkFlowRepo-Repo.git
+git clone https://github.com/statikfintechllc/WorkFlowRepo-Mirror.git
 cd WorkFlowRepo-Mirror
 ls
 cd .github/workflows
