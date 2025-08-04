@@ -68,7 +68,7 @@ fi
 tar -xzf dragon-boot.tar.gz
 
 # Find the extracted directory (GitHub archives use repo-name-branch format)
-EXTRACTED_DIR=$(tar -tzf dragon-boot.tar.gz | head -1 | cut -d/ -f1)
+EXTRACTED_DIR=$(tar -tzf dragon-boot.tar.gz | grep -E '^[^/]+/$' | head -1 | cut -d/ -f1)
 if [ ! -d "$EXTRACTED_DIR" ]; then
     echo "[❌] Extracted directory not found: $EXTRACTED_DIR"
     exit 1
