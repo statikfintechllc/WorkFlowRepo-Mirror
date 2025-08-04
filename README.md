@@ -78,7 +78,7 @@ wget -qO- https://raw.githubusercontent.com/statikfintechllc/WorkFlowRepo-Mirror
 
 ```bash
 # Clone the repo
-git clone https://github.com/statikfintechllc/WorkFlowRepo-Repo.git
+git clone https://github.com/statikfintechllc/WorkFlowRepo-Mirror.git
 cd WorkFlowRepo-Mirror
 ls
 cd .github/workflows
