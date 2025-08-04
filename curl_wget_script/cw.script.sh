@@ -67,10 +67,22 @@ fi
 
 tar -xzf workflowrepo.tar.gz
 
-# Find the extracted directory (GitHub archives use repo-name-branch format)
-EXTRACTED_DIR=$(tar -tf workflowrepo.tar.gz | head -1 | cut -d/ -f1)
-if [ ! -d "$EXTRACTED_DIR" ]; then
-    echo "[❌] Extracted directory not found: $EXTRACTED_DIR"
+# Find the extracted directory (robustly handle files at root level and multiple top-level dirs)
+TOP_LEVELS=$(tar -tf workflowrepo.tar.gz | awk -F/ '{print $1}' | sort -u)
+NUM_TOP_LEVELS=$(echo "$TOP_LEVELS" | wc -l)
+if [ "$NUM_TOP_LEVELS" -eq 1 ]; then
+    EXTRACTED_DIR="$TOP_LEVELS"
+    if [ ! -d "$EXTRACTED_DIR" ]; then
+        echo "[❌] Extracted directory not found: $EXTRACTED_DIR"
+        exit 1
+    fi
+elif [ "$NUM_TOP_LEVELS" -gt 1 ]; then
+    echo "[❌] Archive contains multiple top-level files or directories:"
+    echo "$TOP_LEVELS"
+    echo "[💡] Cannot determine a single extracted directory. Please check the archive structure."
+    exit 1
+else
+    echo "[❌] Could not determine extracted directory from archive."
     exit 1
 fi
 
