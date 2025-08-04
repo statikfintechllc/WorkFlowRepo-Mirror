@@ -2,8 +2,6 @@
 
 set -e
 
-BOOT_URL="https://github.com/statikfintechllc/WorkFlowRepo-Mirror/archive/refs/heads/master.tar.gz"
-
 if [[ ! -f "$0" || "$0" == "bash" || "$0" == "/dev/fd/63" ]]; then
     REMOTE_INSTALL=true
     REPO_DIR="$HOME/WorkFlowRepo-Mirror"
