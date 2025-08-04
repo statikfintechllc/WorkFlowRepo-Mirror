@@ -37,7 +37,7 @@ if [[ ! -f "$0" || "$0" == "bash" || "$0" == "/dev/fd/63" ]]; then
     cd graph
     ls
     cd .. && cd ..
-then
+else
     
     echo "[✅] WorkFlowRepo-Mirror package structure verified successfully!"
 fi
