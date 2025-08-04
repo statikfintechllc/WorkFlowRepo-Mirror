@@ -10,20 +10,6 @@ echo "[📦] Downloading WorkFlowRepo-Mirror Package..."
 mkdir -p /tmp/workflowrepo
 cd /tmp/workflowrepo
 
-# 🔧 Dependency Check
-echo "[🔍] Checking for required packages..."
-if command -v apt &>/dev/null; then
-    sudo apt update
-    sudo apt install -y plymouth plymouth-themes grub2-common
-elif command -v pacman &>/dev/null; then
-    sudo pacman -Sy --noconfirm plymouth grub
-elif command -v dnf &>/dev/null; then
-    sudo dnf install -y plymouth grub2
-else
-    echo "❌ Unsupported package manager. Install dependencies manually."
-    exit 1
-fi
-
 # Download and extract with fallback from wget to curl
 echo "[🌐] Downloading from: $BOOT_URL"
 if command -v wget &>/dev/null; then
